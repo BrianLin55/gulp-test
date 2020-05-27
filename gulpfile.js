@@ -5,7 +5,7 @@ var mainBowerFiles = require('main-bower-files');
 var browserSync = require('browser-sync').create();
 var minimist = require('minimist');
 var gulpSequence = require('gulp-sequence')
-const imagemin = require('gulp-imagemin');
+
 
 
 var envOptions = {
@@ -110,6 +110,11 @@ gulp.task('image-min',() =>
         .pipe($.if(options.env === 'production', $.imagemin()))
         .pipe(gulp.dest('./public/images'))
 );
+
+gulp.task('deploy', function () {
+    return gulp.src('./public/**/*')
+        .pipe($.ghPages());
+});
 
 gulp.task('watch', function () {
     gulp.watch('./source/scss/**/*.scss', ['sass']);
