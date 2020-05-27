@@ -18,6 +18,7 @@ git config --global user.email email
 
 <git config user.name 名稱>
 <git config user.email email>
+  
 3.輸入遠程位置
 
 <git remote add origin "YourGithub_URL">
