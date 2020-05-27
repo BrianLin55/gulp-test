@@ -1,0 +1,20 @@
+{
+  "name": "gulpproject",
+  "description": "",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "angular": "^1.7.9",
+    "bootstrap": "^4.5.0",
+    "vue": "^2.6.11"
+  }
+}
